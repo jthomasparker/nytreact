@@ -17,6 +17,7 @@ module.exports = {
     },
 
     remove: (req, res) => {
+        console.log(req.params.id)
         db.Article
         .findById({ _id: req.params.id })
         .then(dbArticle => dbArticle.remove())

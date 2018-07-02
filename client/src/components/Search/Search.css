@@ -1,0 +1,4 @@
+#searchBody {
+    -webkit-transition: display 4s ease-out;
+    transition: display 4s ease-out;
+}

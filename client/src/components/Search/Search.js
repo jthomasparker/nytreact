@@ -1,10 +1,18 @@
 import React from "react";
+import "./Search.css"
 
 
 export const Search = props => (
-    <div className="card text-white bg-dark mb-3">
-        <h4 className="card-header">Search for Articles</h4>
-        <div className="card-body">
+    <div className="card text-white bg-dark mb-3 searchCard">
+        <div className="card-header">
+            <ul className="nav nav-pills">
+                <li className={"btn " + props.searchBtn}>
+                    <a href="/" className="nav-link text-white">Search</a></li>
+                <li className={"btn " + props.saveBtn}>
+                <a href="/saved" className="nav-link text-white">Saved</a></li>
+            </ul>
+        </div>
+        <div className="card-body" id="searchBody" style={{display: props.searchDisplay}}>
             <form>
                 <div className="form-group">
                     <label htmlFor="topic">Search Topic (required)</label>
@@ -41,7 +49,7 @@ export const Search = props => (
                 </div>
                 <button 
                 onClick={props.handleFormSubmit} 
-                disabled={props.disabled} 
+                disabled={props.disabled}
                 className="btn btn-warning">Search</button>
             </form>
             

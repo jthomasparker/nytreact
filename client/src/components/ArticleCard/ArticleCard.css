@@ -1,0 +1,54 @@
+.articleCard {
+    /*border-radius: 2px;*/
+    border: none;
+    height: auto;
+    margin: 1rem;
+    position: relative;
+    width: 30%;
+   /* padding: 1px */
+  }
+
+  .card {
+    box-shadow: 0px 3px 6px #999, 0px 3px 6px #999;
+  }
+
+  .articleCard > .img-container {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
+  }
+  .articleCard > .img-container > img {
+    width: 100%;
+    /*margin: auto;
+    display: block;
+    height: auto;
+    height: 100%*/
+    
+  }
+
+  .articleCard:hover{
+    box-shadow: 6px 9px 12px #999, 6px 9px 12px #999;
+      padding: 0px;
+      border-radius: 0px; 
+      
+  }
+
+  a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active, button:active {
+    text-decoration: none;
+}
+

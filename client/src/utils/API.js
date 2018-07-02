@@ -7,13 +7,13 @@ export default {
     },
 
     // saves an article
-    postArticle: function(){
-        return axios.post('/api/articles')
+    postArticle: function(data){
+        return axios.post('/api/articles', data)
     },
     
     // deletes an article
     deleteArticle: function(id){
-        return axios.delete('/api/articles' + id)
+        return axios.delete('/api/articles/' + id)
     },
 
     getArticles: function(searchTerm, startYear, endYear){
