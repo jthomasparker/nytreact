@@ -11,7 +11,7 @@ const ResultsContainer = props => (
             headline={article.headline.main}
             url={article.web_url}
             snippet={article.snippet}
-            pic={"https://www.nytimes.com/" + article.multimedia[1].url}
+            pic={article.multimedia.length ? "https://www.nytimes.com/" + article.multimedia[1].url : "https://placehold.it/200x200"}
             date={moment(article.pub_date).format('MMMM Do YYYY, h:mm a')}
             author={article.byline.original}
             key={article._id}

@@ -58,7 +58,7 @@ class Saved extends Component {
                         headline={article.headline}
                         url={article.url}
                         snippet={article.snippet}
-                        pic={"https://www.nytimes.com/" + article.pic}
+                        pic={article.pic}
                         date={moment(article.date).format('MMMM Do YYYY, h:mm a')}
                         author={article.author}
                         key={article._id}

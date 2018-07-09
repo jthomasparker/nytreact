@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import API from '../../utils/API'
 import Search from '../../components/Search'
 import ResultsContainer from '../../components/ResultsContainer'
+import ArticleCard from '../../components/ArticleCard';
+import moment from 'moment'
 
 
 
@@ -55,7 +57,7 @@ class Home extends Component {
             headline: article.headline.main,
             url: article.web_url,
             snippet: article.snippet,
-            pic: article.multimedia[1].url,
+            pic: article.multimedia.length ? "https://www.nytimes.com/" + article.multimedia[1].url : "https://placehold.it/200x200",
             date: article.pub_date,
             author: article.byline.original,
             articleId: article._id
@@ -94,7 +96,21 @@ class Home extends Component {
                             saved={false}
                             saveArticle={this.saveArticle}
                             deleteArticle={this.deleteArticle}
-                        /> 
+                        /> /*
+                            this.state.articles.map(article => {
+                                <ArticleCard
+                                    headline={article.headline.main}
+                                    url={article.web_url}
+                                    snippet={article.snippet}
+                                    pic={article.multimedia[1].url}
+                                    date={moment(article.pub_date).format('MMMM Do YYYY, h:mm a')}
+                                    author={article.byline.original}
+                                    key={article._id}
+                                    saved={false}
+                                    saveArticle={this.saveArticle}
+                                    deleteArticle={this.deleteArticle}
+                                    />
+                            })*/
 
                         ) : (
                             <center>
