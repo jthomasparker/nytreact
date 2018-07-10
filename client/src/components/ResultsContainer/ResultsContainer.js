@@ -10,10 +10,10 @@ const ResultsContainer = props => (
         <ArticleCard
             headline={article.headline.main}
             url={article.web_url}
-            snippet={article.snippet}
-            pic={article.multimedia.length ? "https://www.nytimes.com/" + article.multimedia[1].url : "https://placehold.it/200x200"}
+            snippet={article.snippet ? article.snippet : "No summary available"}
+            pic={article.multimedia.length > 0 ? "https://www.nytimes.com/" + article.multimedia[1].url : "https://placehold.it/200x200"}
             date={moment(article.pub_date).format('MMMM Do YYYY, h:mm a')}
-            author={article.byline.original}
+            author={article.byline ? article.byline.original : ""}
             key={article._id}
             articleId={article._id}
             saved={props.saved}
